@@ -36,8 +36,17 @@ int sommaElementiArray(int[] array)
 
 	return somma;
 }
+Console.WriteLine("Quanti numeri vuoi inserire?");
+int N = Convert.ToInt32(Console.ReadLine());
 
-int[] array = { 2, 6, 7, 5, 3, 9 };
+int[] array;
+array = new int[N];
+
+for (int i = 0; i < N; i++)
+{
+	Console.WriteLine("inserisci elemento n. " + (i + 1));
+	array[i] = Convert.ToInt32(Console.ReadLine());
+}
 
 Console.WriteLine("stampa semplice dell'array");
 StampaArray(array);
